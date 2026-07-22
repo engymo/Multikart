@@ -5,8 +5,8 @@ const Topbar = () => {
         <>
             <div className="bg-[#333]">
 
-                <section className="container mx-auto px-3 flex items-center justify-between text-sm text-[#d9d9d9]">
-                    <div className="hidden lg:flex items-center justify-between py-2.5">
+                <section className="container mx-auto px-3 flex items-center justify-between text-sm text-[#d9d9d9] hidden md:flex lg:flex">
+                    <div className="flex items-center justify-between py-2.5">
                         <h6>Welcome to Our store Multikart</h6>
                         <div className="flex items-center ps-5">
                             <span className="mr-2.5 text-[#ec8951]">< RiPhoneFill size={16} /></span>
@@ -15,7 +15,7 @@ const Topbar = () => {
 
                     </div>
                     <div className="group relative">
-                        <div className="flex items-center lg:justify-between py-2.5 cursor-pointer">
+                        <div className="flex items-center justify-between py-2.5 cursor-pointer">
                             <span className="py-2.5 px-6 hover:text-[#ec8951] transition-all duration-300 ease-in-out">
                                 < RiPokerHeartsFill size={16} />
                             </span>
@@ -36,8 +36,6 @@ const Topbar = () => {
                             </ul>
                         </div>
                     </div>
-
-
                 </section>
             </div>
         </>
