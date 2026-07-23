@@ -5,10 +5,21 @@
 
 @theme {
   --font-montserrat: var(--font-montserrat), sans-serif;
-  --font-libre-baskerville: var(--font-libre-baskerville), serif;
+  --font-lato: var(--font-lato), sans-serif;
 }
 
 body {
-  box-sizing: border-box;
   font-family: var(--font-montserrat);
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 16px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
 }

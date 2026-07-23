@@ -7,19 +7,22 @@ import { navIcons } from '@/data/navIcons';
 import NavbarLinks from './NavbarLinks';
 import { useCartSidebar } from '@/hooks/useCartSidebar';
 import CartDrawer from './Cart/CartDrawer';
+import Sidebar from "@/components/common/Sidebar/SidebarDesktop";
+import useSidebar from "@/hooks/useSidebar";
 
 const Navbar = () => {
     const { isCartOpen, closeCart, handleIconClick } = useCartSidebar();
+    const { isOpen, openSidebar, closeSidebar } = useSidebar();
 
     return (
         <>
             <Topbar />
-            <nav className='container mx-auto px-3 relative'>
+            <nav className='container mx-auto px-4 lg:px-20 relative'>
                 <div className='flex items-center justify-between '>
 
                     {/* Left Section */}
                     <div className='flex items-center cursor-pointer '>
-                        <div className="text-[#222] py-[30px] pr-[25px] pl-0">
+                        <div className="text-[#222] py-[30px] pr-[25px] pl-0 cursor-pointer" onClick={openSidebar}>
                             <RiBarChartHorizontalLine size={28} />
                         </div>
                         <div>
@@ -91,6 +94,10 @@ const Navbar = () => {
                     </div>
                 </div>
                 <CartDrawer isOpen={isCartOpen} onClose={closeCart} />
+                <Sidebar
+                    isOpen={isOpen}
+                    closeSidebar={closeSidebar}
+                />
             </nav>
         </>
     )

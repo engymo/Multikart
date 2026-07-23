@@ -5,7 +5,7 @@ const Topbar = () => {
         <>
             <div className="bg-[#333]">
 
-                <section className="container mx-auto px-3 flex items-center justify-between text-sm text-[#d9d9d9] hidden md:flex lg:flex">
+                <section className="container mx-auto px-4 lg:px-20 flex items-center justify-between text-sm text-[#d9d9d9] hidden md:flex lg:flex">
                     <div className="flex items-center justify-between py-2.5">
                         <h6>Welcome to Our store Multikart</h6>
                         <div className="flex items-center ps-5">

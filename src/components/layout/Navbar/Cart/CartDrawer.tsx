@@ -15,20 +15,25 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
         <>
             {/* 1. Dark Backdrop Panel */}
             <div
-                className={`fixed inset-0 bg-black/20 z-50 transition-opacity duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible "
+                className={`fixed inset-0 bg-black/20 z-50 transition-opacity duration-300 ${isOpen ?
+                    "opacity-100 visible" : "opacity-0 invisible "
                     }`}
                 onClick={onClose}
             />
 
             {/* 2. Side Drawer Container */}
             <aside
-                className={`fixed top-0 right-0 h-full w-[320px] sm:w-[380px] bg-white z-50 shadow-2xl flex flex-col justify-between
-                     transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed top-0 right-0 h-full w-[320px] sm:w-[380px] bg-white z-50 shadow-md flex
+                     flex-col justify-between
+                     transform transition-transform duration-300 ease-in-out 
+                     ${isOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
                 {/* Drawer Header */}
-                <div className="font-libre-baskerville flex items-center justify-between p-4 border-b border-gray-100">
-                    <h2 className=" text-[18px] font-bold text-[#222] uppercase ">
+                <div className="flex items-center justify-between p-4 
+                border-b border-gray-100" style={{ fontFamily: "var(--font-lato)" }}>
+                    <h2 style={{ fontFamily: "var(--font-lato)" }}
+                        className=" text-[18.5px] font-bold text-[#222]">
                         My Cart ({items.length})
                     </h2>
                     <button
@@ -40,13 +45,13 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
 
                 {/* Free Shipping Bar */}
                 <ShippingProgressBar neededAmount={20.96} progressPercentage={65} />
-
+                <div className="border-b border-gray-100 pt-2"></div>
                 {/* Clear Cart Button */}
                 {items.length > 0 && (
                     <div className="px-4 pt-2 text-right">
                         <button
                             onClick={clearCart}
-                            className="font-libre-baskerville text-sm text-[#ec8951] font-medium"
+                            className="font-lato text-[16px] text-[#ec8951] font-semibold"
                         >
                             Clear Cart
                         </button>
@@ -60,10 +65,11 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
                             <p>Your cart is empty.</p>
                         </div>
                     ) : (
-                        items.map((item) => (
+                        items.map((item, index) => (
                             <CartItemRow
                                 key={item.id}
                                 item={item}
+                                index={index}
                                 onUpdateQuantity={updateQuantity}
                                 onRemove={removeItem}
                             />
@@ -72,21 +78,22 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
                 </div>
 
                 {/* Drawer Footer Panel */}
-                <div className="p-4 border-t border-gray-100 bg-white shadow-inner">
-                    <div className="flex justify-between items-center mb-3">
-                        <span className="text-sm font-semibold text-gray-600">Sub Total :</span>
-                        <span className="text-lg font-bold text-[#ec8951]">
+                <div className="font-lato py-2.5 px-[15px] pb-[20px] border-t border-gray-100 bg-white shadow-md">
+                    <div className="flex justify-between items-center font-medium py-2.5">
+                        <span className="text-sm lg:text-[20px] text-[rgb(51, 51, 51)]">Sub Total :</span>
+                        <span className="text-sm lg:text-[20px] font-semibold text-[#ec8951]">
                             ${subtotal.toFixed(2)}
                         </span>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className=" border-b border-gray-200"></div>
+
+                    <div className="grid grid-cols-2 gap-2 mt-2">
                         {actionButtons.map((btn, index) => (
                             <button
                                 key={index}
                                 onClick={btn.onClick}
-                                className="bg-[#ec8951] hover:bg-[#d97742] text-white text-xs font-bold
-                 py-2.5 rounded transition-colors uppercase"
+                                className="bg-[#ec8951] text-white text-sm lg:text-[15px] font-semibold py-2.5 cursor-pointer"
                             >
                                 {btn.label}
                             </button>

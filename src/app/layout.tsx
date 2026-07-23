@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat, Libre_Baskerville } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar/Navbar";
 import Footer from "@/components/layout/Footer/Footer";
@@ -14,14 +14,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
   subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
-  weight: ["400", "700"],
+const lato = Lato({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${libreBaskerville.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
