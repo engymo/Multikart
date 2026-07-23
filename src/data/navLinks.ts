@@ -2,6 +2,7 @@ export type MenuLink = {
   id: number;
   title: string;
   href?: string;
+  badge?: string;
 };
 
 export type MegaMenuSection = {
@@ -16,6 +17,8 @@ export type NavLink = {
   href?: string;
   megaMenu?: MegaMenuSection[];
   dropdown?: MenuLink[];
+  badge?: string;
+  
 };
 
 export const navLinks: NavLink[] = [
@@ -28,6 +31,7 @@ export const navLinks: NavLink[] = [
   {
     id: 2,
     title: "Feature",
+    badge: "NEW",
     megaMenu: [
       {
         id: 1,
@@ -81,53 +85,23 @@ export const navLinks: NavLink[] = [
 
   {
     id: 3,
-    title: "Shop",
-    megaMenu: [
-      {
-        id: 1,
-        title: "Shop Layout",
-        links: [
-          { id: 1, title: "Left Sidebar" },
-          { id: 2, title: "Right Sidebar" },
-          { id: 3, title: "No Sidebar" },
-          { id: 4, title: "3 Grid" },
-          { id: 5, title: "4 Grid" },
-          { id: 6, title: "List View" },
-        ],
-      },
-
-      {
-        id: 2,
-        title: "Product Details",
-        links: [
-          { id: 1, title: "Accordion" },
-          { id: 2, title: "Sticky" },
-          { id: 3, title: "Thumbnail" },
-          { id: 4, title: "Image Swatch" },
-        ],
-      },
-
-      {
-        id: 3,
-        title: "Product Features",
-        links: [
-          { id: 1, title: "Compare" },
-          { id: 2, title: "Wishlist" },
-          { id: 3, title: "Cart" },
-          { id: 4, title: "Checkout" },
-        ],
-      },
-
-      {
-        id: 4,
-        title: "Collections",
-        links: [
-          { id: 1, title: "Men" },
-          { id: 2, title: "Women" },
-          { id: 3, title: "Kids" },
-          { id: 4, title: "Accessories" },
-        ],
-      },
+    title: "shops",
+    dropdown: [
+      { id: 1, title: "Tab Style", badge: "NEW" },
+      { id: 2, title: "Top Filter" },
+      { id: 3, title: "Modern" },
+      { id: 4, title: "Left Sidebar" },
+      { id: 5, title: "Right Sidebar" },
+      { id: 6, title: "No Sidebar" },
+      { id: 7, title: "Category Slider" },
+      { id: 8, title: "Sidebar Popup" },
+      { id: 9, title: "Metro" },
+      { id: 10, title: "Full Width" },
+      { id: 11, title: "Load More" },
+      { id: 12, title: "Two Grid" },
+      { id: 13, title: "Three Grid" },
+      { id: 14, title: "Four Grid" },
+      { id: 15, title: "List View" },
     ],
   },
 

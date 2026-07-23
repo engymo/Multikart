@@ -27,15 +27,13 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
                     }`}
             >
                 {/* Drawer Header */}
-                <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                    <h2 className="text-base font-bold text-gray-800 uppercase ">
-                        Shopping Cart ({items.length})
+                <div className="font-libre-baskerville flex items-center justify-between p-4 border-b border-gray-100">
+                    <h2 className=" text-[18px] font-bold text-[#222] uppercase ">
+                        My Cart ({items.length})
                     </h2>
                     <button
                         onClick={onClose}
-                        className="p-1 text-gray-400 hover:text-black rounded-full hover:bg-gray-100 
-                        transition-colors"
-                    >
+                        className="p-1 text-[#333333] bg-[#f8f8f8] border border-[#eee]">
                         <RiCloseLine size={22} />
                     </button>
                 </div>
@@ -48,7 +46,7 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
                     <div className="px-4 pt-2 text-right">
                         <button
                             onClick={clearCart}
-                            className="text-xs text-[#ec8951] font-medium"
+                            className="font-libre-baskerville text-sm text-[#ec8951] font-medium"
                         >
                             Clear Cart
                         </button>

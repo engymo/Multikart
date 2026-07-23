@@ -1,17 +1,23 @@
 import { RiSoundModuleLine } from '@remixicon/react'
 import React from 'react'
 
-const CustomizeBtton = () => {
+const CustomizeButton = () => {
   return (
-    <>
-      <div className='fixed top-1/2 right-0 z-50 transform -translate-y-1/2'>
-        <span>< RiSoundModuleLine  /></span>
-        <button className='bg-[#ff6e4] px-4 py-2 text-white'>
-            Customize
-        </button>
-      </div>
-    </>
+    <div className="fixed top-1/2 right-0 z-50 -translate-y-1/2 font-semibold text-[14px] text-[#fff]">
+      <button
+        className="bg-[#333333] py-2 px-2 
+                   flex flex-col items-center cursor-pointer"
+      >
+        <RiSoundModuleLine size={20} />
+        <span
+          className="tracking-wider capitalize"
+          style={{ writingMode: 'vertical-rl' }}
+        >
+          Customize
+        </span>
+      </button>
+    </div>
   )
 }
 
-export default CustomizeBtton
+export default CustomizeButton
