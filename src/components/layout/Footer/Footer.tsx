@@ -38,7 +38,7 @@ export default function Footer() {
                 return (
                   <div
                     key={item.text}
-                    className="flex items-start gap-3"
+                    className="flex items-start gap-3 hover:text-gray-400"
                   >
                     <Icon
                       size={18}
@@ -65,7 +65,7 @@ export default function Footer() {
                       href={link.url}
                       className=" relative inline-block pb-1 after:absolute after:left-0 after:bottom-0
                                   after:h-[3px] after:w-0 after:bg-[#e06b42] after:transition-all after:duration-300
-                                  after:ease-in-out hover:after:w-full" >
+                                  after:ease-in-out hover:after:w-full " >
                       {link.label}
                     </Link>
                   </li>

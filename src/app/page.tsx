@@ -7,6 +7,7 @@ import StickyBuyBar from "@/components/product/StickyBuyBar/StickyBuyBar";
 import ProductDetails from "@/components/product/ProductDetails";
 import ProductTabsWrapper from "@/components/product/tabs/ProductTabsWrapper";
 import RelatedProducts from "@/components/product/RelatedProducts/RelatedProducts";
+import FixedBarBotton from "@/components/common/FixedBarBottom/FixedBarBotton";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProductTabsWrapper />
       <RelatedProducts />
       <SalesToast />
+      <FixedBarBotton/>
       <CustomizeButton />
       <StickyBuyBar />
     </main>
