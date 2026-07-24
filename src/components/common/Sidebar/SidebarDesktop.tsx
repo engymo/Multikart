@@ -21,6 +21,7 @@ const Sidebar = ({ isOpen, closeSidebar }: SidebarProps) => {
 
       {/* Sidebar */}
       <aside
+        spellCheck={false}
         className={`fixed top-0 left-0 z-50 h-screen w-[300px] bg-white transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
@@ -41,7 +42,8 @@ const Sidebar = ({ isOpen, closeSidebar }: SidebarProps) => {
           {categories.map((item) => (
             <li
               key={item.title}
-              className="group relative flex items-center justify-between px-6 py-[13px] text-[14px] text-[#222] cursor-pointer hover:text-[#ec8951]"
+              className="group relative flex items-center justify-between px-6 py-[13px] text-[14px]
+               text-[#222] cursor-pointer hover:text-[#ec8951]"
             >
               <span>{item.title}</span>
 
@@ -61,13 +63,15 @@ const Sidebar = ({ isOpen, closeSidebar }: SidebarProps) => {
                     }`}
                 >
                   {/* Columns */}
-                  {item.columns.map((column) => (
-                    <div key={column.title}>
-                      {/* Column Title */}
-                      <h3 className="relative mb-7 text-[18px] font-bold text-[#222]">
-                        {column.title}
-                        <span className="absolute left-0 -bottom-3 h-[2px] w-10 bg-[#ff4c3b]" />
-                      </h3>
+                  {item.columns.map((column, columnIndex) => (
+                    <div key={column.title || columnIndex}>
+
+                      {column.title && (
+                        <h3 className="relative mb-7 text-[18px] font-bold text-[#222]">
+                          {column.title}
+                          <span className="absolute left-0 -bottom-3 h-[2px] w-10 bg-[#ff4c3b]" />
+                        </h3>
+                      )}
 
                       {/* Links */}
                       <ul className="space-y-3">
@@ -76,8 +80,8 @@ const Sidebar = ({ isOpen, closeSidebar }: SidebarProps) => {
                             key={link.title}
                             className="relative text-[15px] text-[#333] hover:text-[#ff4c3b] 
                             after:absolute after:left-0 after:-bottom-0
-after:h-[5px] after:w-0 after:bg-[rgba(255,76,59,0.3)] after:rounded-full
-after:transition-all after:duration-300 hover:after:w-12 duration-200 cursor-pointer"
+                            after:h-[5px] after:w-0 after:bg-[rgba(255,76,59,0.3)] after:rounded-full
+                            after:transition-all after:duration-300 hover:after:w-12 duration-200 cursor-pointer"
                           >
                             {link.title}
                           </li>
@@ -87,20 +91,22 @@ after:transition-all after:duration-300 hover:after:w-12 duration-200 cursor-poi
                       {/* Nested Sections */}
                       {column.sections?.map((section) => (
                         <div key={section.title} className="mt-10">
-                          <h3 className="relative mb-7 text-[18px] font-bold text-[#222]">
-                            {section.title}
-                            <span className="absolute left-0 -bottom-3 h-[2px] w-10 bg-[#ff4c3b]" />
-                          </h3>
+                          {section.title && (
+                            <h3 className="relative mb-7 text-[18px] font-bold text-[#222]">
+                              {section.title}
+                              <span className="absolute left-0 -bottom-3 h-[2px] w-10 bg-[#ff4c3b]" />
+                            </h3>
+                          )}
 
                           <ul className="space-y-3">
                             {section.links.map((link) => (
-                             <li
-                            key={link.title}
-                            className="relative text-[15px] text-[#333] hover:text-[#ff4c3b] 
-                            after:absolute after:left-0 after:-bottom-0
-after:h-[5px] after:w-0 after:bg-[rgba(255,76,59,0.3)] after:rounded-full
-after:transition-all after:duration-300 hover:after:w-12 duration-200 cursor-pointer"
-                          >
+                              <li
+                                key={link.title}
+                                className="relative text-[15px] text-[#333] hover:text-[#ff4c3b] 
+                                after:absolute after:left-0 after:-bottom-0
+                                after:h-[5px] after:w-0 after:bg-[rgba(255,76,59,0.3)] after:rounded-full
+                                after:transition-all after:duration-300 hover:after:w-12 duration-200 cursor-pointer"
+                              >
                                 {link.title}
                               </li>
                             ))}

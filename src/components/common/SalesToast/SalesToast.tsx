@@ -11,7 +11,7 @@ const SalesToast = () => {
     if (!isVisible) return null;
     return (
         <>
-            <div className='fixed bottom-35 left-5 p-2 shadow-md flex gap-2 w-90 bg-white border-gray-50 rounded'>
+            <div className='fixed bottom-35 z-100 left-5 p-2 shadow-md flex gap-2 w-90 bg-white border-gray-50 rounded'>
                 <div>
                     <img src="/images/sm.jpg" alt="salesimg"/>
                 </div>

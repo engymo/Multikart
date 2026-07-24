@@ -1,30 +1,11 @@
-import type { RemixiconComponentType } from "@remixicon/react";
 import {
     RiBarChartHorizontalLine,
     RiSearchLine,
     RiEqualizer2Line,
     RiShoppingCartLine
 } from "@remixicon/react";
+import {NavIcon} from "@/types/NavIcon"
 
-export type DropdownSection = {
-    id: number;
-    title: string;
-    options: {
-        id: number;
-        label: string;
-        href?: string;
-    }[];
-};
-
-export type NavIcon = {
-    id: number;
-    name: string;
-    icon: RemixiconComponentType;
-    className?: string;
-    color?: string;
-    badge?: number;
-    dropdown?: DropdownSection[];
-};
 
 export const navIcons: NavIcon[] = [
     {

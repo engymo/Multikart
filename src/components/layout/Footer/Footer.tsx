@@ -63,19 +63,9 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.url}
-                      className=" relative
-                                  inline-block
-                                  pb-1
-                                  after:absolute
-                                  after:left-0
-                                  after:bottom-0
-                                  after:h-[3px]
-                                  after:w-0
-                                  after:bg-[#e06b42]
-                                  after:transition-all
-                                  after:duration-300
-                                  after:ease-in-out
-                                  hover:after:w-full" >
+                      className=" relative inline-block pb-1 after:absolute after:left-0 after:bottom-0
+                                  after:h-[3px] after:w-0 after:bg-[#e06b42] after:transition-all after:duration-300
+                                  after:ease-in-out hover:after:w-full" >
                       {link.label}
                     </Link>
                   </li>
@@ -101,13 +91,17 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter Email Address"
-                className="w-full bg-white px-4 py-3 text-sm text-[#333] outline-none"
+                className="w-full bg-white px-4 py-3 text-base text-[#222] outline-none"
               />
 
               <button
                 type="submit"
-                className="w-40 bg-[rgb(236,137,81)] py-3 text-lg font-semibold border border-[#f07c53]
-    shadow-[inset_1px_1px_0_#000] text-[rgba(255,255,255,0.9)]">
+                className="w-40 py-3 text-lg font-semibold border border-[#f07c53]
+    shadow-[inset_1px_1px_0_#000] text-white
+    bg-[linear-gradient(30deg,#ec8951_50%,#ffffff_50%)] bg-[length:850px] bg-[position:0_50%]
+    bg-no-repeat tracking-[0.71px] transition-[background-position,color,border-color] duration-400 
+    ease-in-out hover:bg-[position:100%_50%] hover:text-[#ec8951] hover:border-[#ec8951]"
+              >
                 Subscribe
               </button>
             </form>

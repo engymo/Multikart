@@ -32,7 +32,6 @@ export const categories: SidebarItem[] = [
       },
 
       {
-        title: "Accessories",
         links: [
           { title: "Fashion Jewellery" },
           { title: "Caps And Hats" },
@@ -47,28 +46,26 @@ export const categories: SidebarItem[] = [
     ],
   },
 
-  {
-    title: "Bags",
-    type: "small",
-    columns: [
-      {
-        title: "Bags",
-        links: [
-          { title: "Shopper Bags" },
-          { title: "Laptop Bags" },
-          { title: "Clutches" },
-          { title: "Purses" },
-        ],
-      },
-    ],
-  },
+{
+  title: "Bags",
+  type: "small",
+  columns: [
+    {
+      links: [
+        { title: "Shopper Bags" },
+        { title: "Laptop Bags" },
+        { title: "Clutches" },
+        { title: "Purses" },
+      ],
+    },
+  ],
+},
 
   {
     title: "Footwear",
     type: "small",
     columns: [
       {
-        title: "Footwear",
         links: [
           { title: "Sport Shoes" },
           { title: "Formal Shoes" },
@@ -87,7 +84,6 @@ export const categories: SidebarItem[] = [
     type: "small",
     columns: [
       {
-        title: "Accessories",
         links: [
           { title: "Fashion Jewellery" },
           { title: "Caps And Hats" },
@@ -112,7 +108,6 @@ export const categories: SidebarItem[] = [
     type: "small",
     columns: [
       {
-        title: "Beauty",
         links: [
           { title: "Makeup" },
           { title: "Skincare" },

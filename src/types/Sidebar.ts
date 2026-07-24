@@ -8,7 +8,7 @@ export interface SidebarSection {
 }
 
 export interface SidebarColumn {
-  title: string;
+  title?: string;
   links: SidebarLink[];
   sections?: SidebarSection[];
 }

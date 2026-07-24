@@ -25,7 +25,7 @@ const StickyBuyBar = () => {
                         <h3 className='hidden md:hidden lg:block'>Variants:</h3>
 
                         <select
-                            className="w-full rounded border border-gray-300 px-3 py-2 text-base focus:outline-none"
+                            className="w-full rounded border border-gray-300 px-3 py-2 text-base bg-gray-100 focus:outline-none"
                         >
                             <option value="">Color</option>
                             <option value="s">Pink</option>
@@ -33,7 +33,7 @@ const StickyBuyBar = () => {
                             <option value="l">gray</option>
                         </select>
                         <select
-                            className="w-full rounded border border-gray-300 px-3 py-2 text-base focus:outline-none"
+                            className="w-full rounded border border-gray-300 px-3 py-2 text-base bg-gray-100 focus:outline-none"
                         >
                             <option value="">Size</option>
                             <option value="s">Small</option>
@@ -42,8 +42,11 @@ const StickyBuyBar = () => {
                         </select>
 
                     </div>
-                    <button className='text-[#fff] bg-[rgb(236,137,81)] font-semibold 
-                     text-[15.3225px] px-[16px] py-[9px] border-2 border-[rgb(236, 137, 81)]'>
+                    <button className='font-semibold text-[15.3225px] px-[16px] py-[9px] border-2 border-[rgb(236, 137, 81)]
+                       relative overflow-hidden border-2 border-white
+    bg-[linear-gradient(30deg,#ec8951_50%,transparent_50%)] bg-[length:850px] bg-[position:0_50%]
+    bg-no-repeat tracking-[0.71px] text-white transition-[background-position] duration-400 
+    ease-in-out hover:bg-[position:100%_50%] hover:text-[#ec8951] hover:border-[#ec8951] '>
                         Add To Cart
                     </button>
 

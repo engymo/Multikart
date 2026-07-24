@@ -7,13 +7,20 @@ import { navIcons } from '@/data/navIcons';
 import NavbarLinks from './NavbarLinks';
 import { useCartSidebar } from '@/hooks/useCartSidebar';
 import CartDrawer from './Cart/CartDrawer';
-import Sidebar from "@/components/common/Sidebar/SidebarDesktop";
+import SidebarDesktop from "@/components/common/Sidebar/SidebarDesktop";
+import SidebarMobile from "@/components/common/Sidebar/SidebarMobile";
 import useSidebar from "@/hooks/useSidebar";
+import useMobileMenu from "@/hooks/useMobileMenu";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
     const { isCartOpen, closeCart, handleIconClick } = useCartSidebar();
     const { isOpen, openSidebar, closeSidebar } = useSidebar();
-
+    const {
+        isMobileMenuOpen,
+        openMobileMenu,
+        closeMobileMenu,
+    } = useMobileMenu();
     return (
         <>
             <Topbar />
@@ -47,7 +54,13 @@ const Navbar = () => {
                                 <div key={`nav-icon-${item.id}-${index}`} className="relative group py-[30px]">
                                     <button
                                         className={`${item.className} relative flex items-center`}
-                                        onClick={() => handleIconClick(item.name)}
+                                        onClick={() => {
+                                            if (item.name === "mobilemenu") {
+                                                openMobileMenu();
+                                            } else {
+                                                handleIconClick(item.name);
+                                            }
+                                        }}
                                     >
                                         <Icon style={{ color: item.color, fontWeight: "400" }} size={28} />
 
@@ -93,10 +106,26 @@ const Navbar = () => {
                         })}
                     </div>
                 </div>
+
                 <CartDrawer isOpen={isCartOpen} onClose={closeCart} />
-                <Sidebar
-                    isOpen={isOpen}
-                    closeSidebar={closeSidebar}
+
+
+                <div className="lg:hidden">
+                    <SidebarMobile
+                        isOpen={isOpen}
+                        closeSidebar={closeSidebar}
+                    />
+                </div>
+
+                <div className="hidden lg:block">
+                    <SidebarDesktop
+                        isOpen={isOpen}
+                        closeSidebar={closeSidebar}
+                    />
+                </div>
+                <MobileMenu
+                    isOpen={isMobileMenuOpen}
+                    closeMenu={closeMobileMenu}
                 />
             </nav>
         </>
