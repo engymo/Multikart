@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { RiAddLine, RiSubtractLine, RiCloseFill } from "@remixicon/react";
-import { navLinks, NavLink } from "@/data/navLinks"; 
+import { navLinks } from "@/data/navLinks"; 
+import { NavLink } from "@/types/NavLink";
 
 interface MobileMenuProps {
   isOpen: boolean;
