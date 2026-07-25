@@ -1,8 +1,31 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+# Multikart E-commerce
 
+A modern and responsive e-commerce application built with **Next.js**, **TypeScript**, and **Tailwind CSS**. The project follows a clean component-based architecture and integrates with APIs using **TanStack React Query** for efficient data fetching, caching, and state management.
+
+## 🚀 Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- TanStack React Query
+- Responsive Design
+- REST API Integration
+
+## ✨ Features
+
+- Fully responsive design for mobile, tablet, and desktop.
+- Clean and reusable component architecture.
+- API integration using React Query.
+- Fast data fetching with caching and automatic synchronization.
+- Optimized performance with Next.js.
+- Modern UI built with Tailwind CSS.
 First, run the development server:
+
+## Deploy on Vercel
+
 
 ```bash
 npm run dev
