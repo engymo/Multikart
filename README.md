@@ -25,7 +25,7 @@ A modern and responsive e-commerce application built with **Next.js**, **TypeScr
 First, run the development server:
 
 ## Deploy on Vercel
-
+https://multikart-nu.vercel.app/
 
 ```bash
 npm run dev
