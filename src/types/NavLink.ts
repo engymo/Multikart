@@ -1,5 +1,5 @@
 export interface MegaMenuLink {
-  badge: import("react").JSX.Element;
+  badge?: string;
   id: number;
   title: string;
   href?: string;
