@@ -2,7 +2,7 @@ import { RelatedProduct } from '@/types/related-products';
 
 export const relatedProductsData: RelatedProduct[] = [
   {
-    id: '1',
+    id: 1,
     title: 'Glamour Gaze',
     subtitle: 'Purple Mini Dress',
     image: '/images/products/5.jpg',
@@ -13,7 +13,7 @@ export const relatedProductsData: RelatedProduct[] = [
     offerTag: 'Limited Time Offer: 5% off',
   },
   {
-    id: '2',
+    id: 2,
     title: 'Couture Edge',
     subtitle: 'Chic Mini Dress',
     image: '/images/products/6.jpg',
@@ -22,7 +22,7 @@ export const relatedProductsData: RelatedProduct[] = [
     offerTag: 'Limited Time Offer: 5% off',
   },
   {
-    id: '3',
+    id: 3,
     title: 'Urban Chic',
     subtitle: 'Stripped Bodycon Dress',
     image: '/images/products/7.jpg',
@@ -31,7 +31,7 @@ export const relatedProductsData: RelatedProduct[] = [
     offerTag: 'Limited Time Offer: 5% off',
   },
   {
-    id: '4',
+    id: 4,
     title: 'Couture Edge',
     subtitle: 'Tie and Dye Chiffon Top',
     image: '/images/products/8.jpg',
@@ -42,7 +42,7 @@ export const relatedProductsData: RelatedProduct[] = [
     offerTag: 'Limited Time Offer: 5% off',
   },
   {
-    id: '5',
+    id: 5,
     title: 'Glamour Gaze',
     subtitle: 'Chic Crop Top',
     image: '/images/products/11.jpg',
