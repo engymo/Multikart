@@ -15,7 +15,9 @@ const Selling = () => {
                 <img src="/images/trending.gif" alt='selling' className='w-8 h-8' />
                 <h4 className='text-[rgb(34,34,34)]'>Selling fast! 4 people have this in their carts.</h4>
             </div>
-            <h2 className="text-[rgb(51,51,51)] text-center md:text-left lg:text-left font-bold text-[21.0375px]"> Gym Coords Set (Brown) </h2>
+            <h2 className="text-[rgb(51,51,51)] text-center md:text-left lg:text-left font-bold text-[21.0375px]">
+                Gym Coords Set <br className="hidden md:block" /> (Brown)
+            </h2>
             <div className='flex items-center justify-center md:justify-start lg:justify-start mt-3'>
                 <div className='flex gap-1'>
                     {Array.from({ length: 5 }).map((_, index) =>
