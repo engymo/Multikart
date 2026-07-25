@@ -33,7 +33,7 @@ const Navbar = () => {
                             <RiBarChartHorizontalLine size={28} />
                         </div>
                         <div>
-                            <img src="images/logo/logo.png" alt="Logo" className='w-40 hidden lg:block md:block' />
+                            <img src="/images/logo/logo.png" alt="Logo" className='w-40 hidden lg:block md:block' />
                         </div>
                     </div>
 
