@@ -33,13 +33,13 @@ const Navbar = () => {
                             <RiBarChartHorizontalLine size={28} />
                         </div>
                         <div>
-                            <img src="/images/logo/logo.png" alt="Logo" className='w-40 hidden lg:block md:block' />
+                            <img src="/images/Logo/logo.png" alt="Logo" className='w-40 hidden lg:block md:block' />
                         </div>
                     </div>
 
                     {/* Mobile Centered Logo */}
                     <div className="absolute left-1/2 -translate-x-1/2 md:hidden lg:hidden">
-                        <img src="images/logo/logo.png" alt="Logo" className='w-40' />
+                        <img src="/images/Logo/logo.png" alt="Logo" className='w-40' />
                     </div>
 
                     {/* Right Icons Section */}
