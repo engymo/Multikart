@@ -1,11 +1,11 @@
 export interface RelatedProduct {
-  id: string;
+  id: number;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   image: string;
-  rating: number;
   price: number;
   originalPrice?: number;
   discountPercentage?: number;
+  rating?: number;
   offerTag?: string;
 }

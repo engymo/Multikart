@@ -25,7 +25,7 @@ export const ProductTabsWrapper: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-8 py-3 text-sm font-medium transition-all duration-200 border ${
+              className={`px-8 py-3 text-[16px] font-medium transition-all duration-200 border ${
                 isActive
                   ? 'bg-[#E27C49] text-white border-[#E27C49] shadow-sm'
                   : 'bg-white text-[#333333] border-gray-200'
@@ -38,7 +38,7 @@ export const ProductTabsWrapper: React.FC = () => {
       </div>
 
       {/* Active Tab View */}
-      <div className="bg-white border border-gray-100 rounded-sm p-6 lg:p-8 shadow-sm">
+      <div className="bg-white border border-gray-100 p-6 lg:p-8 shadow-sm">
         {activeTab === 'description' && <DescriptionTab />}
         {activeTab === 'review' && <ReviewTab />}
         {activeTab === 'qa' && <QATab />}

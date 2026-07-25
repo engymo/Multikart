@@ -1,25 +1,4 @@
-export type MenuLink = {
-  id: number;
-  title: string;
-  href?: string;
-  badge?: string;
-};
-
-export type MegaMenuSection = {
-  id: number;
-  title: string;
-  links: MenuLink[];
-};
-
-export type NavLink = {
-  id: number;
-  title: string;
-  href?: string;
-  megaMenu?: MegaMenuSection[];
-  dropdown?: MenuLink[];
-  badge?: string;
-  
-};
+import { NavLink } from "@/types/NavLink";
 
 export const navLinks: NavLink[] = [
   {
@@ -43,41 +22,76 @@ export const navLinks: NavLink[] = [
           { id: 4, title: "Invoice 4" },
           { id: 5, title: "Invoice 5" },
         ],
+        subSections: [
+          {
+            id: 1,
+            title: "Elements",
+            links: [{ id: 1, title: "Elements Page", isHot: true }],
+          },
+        ],
       },
-
       {
         id: 2,
         title: "Email Template",
         links: [
-          { id: 1, title: "Welcome Template" },
-          { id: 2, title: "Order Success" },
-          { id: 3, title: "Reset Password" },
-          { id: 4, title: "Offer Template" },
-          { id: 5, title: "Abandoned Cart" },
+          { id: 1, title: "Welcome" },
+          { id: 2, title: "Announcement" },
+          { id: 3, title: "Abandonment" },
+          { id: 4, title: "Offer" },
+          { id: 5, title: "Offer 2" },
+          { id: 6, title: "Review" },
+          { id: 7, title: "Featured Product" },
         ],
       },
-
       {
         id: 3,
-        title: "Elements",
+        title: "Email Template",
         links: [
-          { id: 1, title: "Title" },
-          { id: 2, title: "Collection Banner" },
-          { id: 3, title: "Home Slider" },
-          { id: 4, title: "Category" },
-          { id: 5, title: "Service" },
+          { id: 1, title: "Black Friday" },
+          { id: 2, title: "Christmas" },
+          { id: 3, title: "Cyber-Monday" },
+          { id: 4, title: "Flash Sale" },
+          { id: 5, title: "Order Success" },
+          { id: 6, title: "Order Success 2" },
         ],
       },
-
       {
         id: 4,
-        title: "Themes",
+        title: "Cookie Bar",
         links: [
-          { id: 1, title: "Fashion" },
-          { id: 2, title: "Furniture" },
-          { id: 3, title: "Electronic" },
-          { id: 4, title: "Shoes" },
-          { id: 5, title: "Watch" },
+          { id: 1, title: "Bottom", isHot: true },
+          { id: 2, title: "Bottom Left" },
+          { id: 3, title: "Bottom Right" },
+        ],
+        subSections: [
+          {
+            id: 1,
+            title: "Search",
+            links: [{ id: 1, title: "Ajax Search", isHot: true }],
+          },
+        ],
+      },
+      {
+        id: 5,
+        title: "Model",
+        links: [
+          { id: 1, title: "Newsletter" },
+          { id: 2, title: "Exit", isHot: true },
+          { id: 3, title: "Christmas" },
+          { id: 4, title: "Black Friday" },
+          { id: 5, title: "Cyber Monday" },
+          { id: 6, title: "New Year" },
+        ],
+      },
+      {
+        id: 6,
+        title: "Add To Cart",
+        links: [
+          { id: 1, title: "Cart Modal Popup" },
+          { id: 2, title: "Cart Top" },
+          { id: 3, title: "Cart Bottom" },
+          { id: 4, title: "Cart Left" },
+          { id: 5, title: "Cart Right" },
         ],
       },
     ],
@@ -111,42 +125,77 @@ export const navLinks: NavLink[] = [
     megaMenu: [
       {
         id: 1,
-        title: "Sidebar",
+        title: "Product Page",
         links: [
-          { id: 1, title: "Left Sidebar" },
-          { id: 2, title: "Right Sidebar" },
-          { id: 3, title: "No Sidebar" },
+          { id: 1, title: "Product Thumbnail" },
+          { id: 2, title: "Product Image" },
+          { id: 3, title: "Product Slider" },
+          { id: 4, title: "Product Accordion" },
+          { id: 5, title: "Product Sticky" },
+          { id: 6, title: "Product Vertical Tab" },
+        ],
+        subSections: [
+          {
+            id: 1,
+            title: "Product Features",
+            links: [
+              { id: 1, title: "Sticky Checkout" },
+              { id: 2, title: "Secure Checkout" },
+              { id: 3, title: "Social Share" },
+              { id: 4, title: "Related Products" },
+              { id: 5, title: "Wishlist & Compare" },
+            ],
+          },
         ],
       },
 
       {
         id: 2,
-        title: "Product Pages",
+        title: "Product Page",
         links: [
-          { id: 1, title: "Accordion" },
-          { id: 2, title: "Sticky" },
-          { id: 3, title: "Thumbnail" },
-          { id: 4, title: "Gallery" },
+          { id: 1, title: "Product Sidebar Left" },
+          { id: 2, title: "Product Sidebar Right" },
+          { id: 3, title: "Product No Sidebar" },
+          { id: 4, title: "Product Column Thumbnail" },
+          { id: 5, title: "Product Thumbnail Image ..." },
         ],
       },
 
       {
         id: 3,
-        title: "Product Types",
+        title: "Product Variants Style",
         links: [
-          { id: 1, title: "Simple Product" },
-          { id: 2, title: "Variable Product" },
-          { id: 3, title: "Grouped Product" },
+          { id: 1, title: "Variant Rectangle" },
+          { id: 2, title: "Variant Circle" },
+          { id: 3, title: "Variant Image Swatch" },
+          { id: 4, title: "Variant Color" },
+          { id: 5, title: "Variant Radio Button" },
+          { id: 6, title: "Variant Dropdown" },
         ],
       },
 
       {
         id: 4,
-        title: "More",
+        title: "Product Features",
         links: [
-          { id: 1, title: "Reviews" },
-          { id: 2, title: "Size Chart" },
-          { id: 3, title: "FAQ" },
+          { id: 1, title: "Product Simple" },
+          { id: 2, title: "Product Classified" },
+          { id: 3, title: "Size Chart" },
+          { id: 4, title: "Delivery & Return" },
+          { id: 5, title: "Product Review" },
+          { id: 6, title: "Ask An Expert" },
+        ],
+      },
+
+      {
+        id: 5,
+        title: "Product Features",
+        links: [
+          { id: 1, title: "Bundle (Cross Sale)" },
+          { id: 2, title: "Hot Stock Progress" },
+          { id: 3, title: "Out Stock" },
+          { id: 4, title: "Sale Countdown" },
+          { id: 5, title: "Product Zoom" },
         ],
       },
     ],

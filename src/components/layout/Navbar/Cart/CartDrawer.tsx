@@ -23,7 +23,7 @@ export const CartDrawer: React.FC<CartDropdownProps> = ({ isOpen, onClose }) => 
 
             {/* 2. Side Drawer Container */}
             <aside
-                className={`fixed top-0 right-0 h-full w-[320px] sm:w-[380px] bg-white z-50 shadow-md flex
+                className={`fixed top-0 right-0 h-full w-[320px] sm:w-[380px] bg-white z-90 shadow-md flex
                      flex-col justify-between
                      transform transition-transform duration-300 ease-in-out 
                      ${isOpen ? "translate-x-0" : "translate-x-full"

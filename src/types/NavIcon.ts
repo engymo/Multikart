@@ -19,3 +19,4 @@ export type NavIcon = {
     badge?: number;
     dropdown?: DropdownSection[];
 };
+

@@ -27,7 +27,7 @@ const GallerySlider = () => {
         {/* Desktop */}
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className="hidden lg:flex absolute left-[-15] top-1/2 -translate-y-1/2 z-50
+          className="hidden lg:flex absolute left-[-15] top-1/2 -translate-y-1/2 z-30
       h-9 w-9 items-center justify-center rounded-full bg-white shadow-lg"
         >
           <RiArrowLeftSLine size={22} />
@@ -35,7 +35,7 @@ const GallerySlider = () => {
 
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className="hidden lg:flex absolute right-[-15] top-1/2 -translate-y-1/2 z-50
+          className="hidden lg:flex absolute right-[-15] top-1/2 -translate-y-1/2 z-30
       h-9 w-9 items-center justify-center rounded-full bg-white shadow-lg"
         >
           <RiArrowRightSLine size={22} />
@@ -44,7 +44,7 @@ const GallerySlider = () => {
         {/* Mobile */}
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className="lg:hidden absolute left-3 top-1/2 -translate-y-1/2 z-50
+          className="lg:hidden absolute left-3 top-1/2 -translate-y-1/2 z-30
       h-8 w-8 rounded-full bg-white shadow flex justify-center items-center"
         >
           <RiArrowLeftSLine size={22} />
@@ -52,7 +52,7 @@ const GallerySlider = () => {
 
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className="lg:hidden absolute right-3 top-1/2 -translate-y-1/2 z-50
+          className="lg:hidden absolute right-3 top-1/2 -translate-y-1/2 z-30
       h-8 w-8 rounded-full bg-white shadow flex justify-center items-center"
         >
           <RiArrowRightSLine size={22} />

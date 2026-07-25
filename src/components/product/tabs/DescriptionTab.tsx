@@ -5,7 +5,7 @@ export const DescriptionTab: React.FC = () => {
     const { mainText, fabric, sizeAndFit, materialAndCare } = productDescriptionData;
 
     return (
-        <div className="text-[#777777] text-[15px] leading-relaxed">
+        <div className="text-[#777777] text-[16px] leading-relaxed">
             <p>{mainText}</p>
 
             <div>
